@@ -1,3 +1,4 @@
+### <a href="https://bonioloff.github.io/" target="_blank">Home</a> - <a href="https://www.linkedin.com/in/bonioloff/" target="_blank">LinkedIn</a>
 # Global Agriculture Analytics
 
 This is a project of me (@bonioloff), Harry Satriyo Hendharto (@harryhendharto) and Johnson Bam for the Data Engineering - MSCA 31012 class at The University of Chicago.
