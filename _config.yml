@@ -1,7 +1,7 @@
 title: Boni's Page
 logo: 
 description: Complex is better than complicated
-show_downloads: false
+show_downloads: true
 google_analytics:
 remote_theme: pages-themes/minimal@v0.2.0
 main_page: https://bonioloff.github.io
@@ -10,4 +10,4 @@ leetcode: https://leetcode.com/bonioloff
 kaggle: https://www.kaggle.com/bonioloff
 github:
   is_user_page: true
-  is_project_page: false
+  is_project_page: true
