@@ -6,4 +6,4 @@ google_analytics:
 remote_theme: pages-themes/minimal@v0.2.0
 main_page: https://bonioloff.github.io
 github:
-  - is_user_page: true
+  is_user_page: true
