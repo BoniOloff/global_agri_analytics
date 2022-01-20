@@ -6,7 +6,7 @@ In this project, we explored the 2017 **World Bank Global Financial Inclusion (F
 Data Preparation
 ================
 
-![Data Preparation](/images/data_preparation.jpg)
+![Data Preparation](./images/data_preparation.jpg)
 
 **Data extraction**: We accessed the data by calling the API for both World Bank and IMF database, then parsed the JSON formatted information to get the specific parameter of the dataset. First, for each dataset, we look for _dataset\_id_ for Findex and FAS, then we pass it to another API endpoint to find the complete list of available indicators. Second, we chose several important _indicators\_id_ of our interest, then we call those indicators to get the complete data for 2017 with the help of wbdata library. We cannot utilize the _worldbank API_ within the _pandas-datareader_ since it is only work for World Development Indicators dataset, not for the other dataset like Global Findex.
 
@@ -17,7 +17,7 @@ Data Preparation
 RESEARCH QUESTIONS & METHODOLOGY
 ================================
 
-![Methodology](/images/methodology.jpg)
+![Methodology](./images/methodology.jpg)
 
 The main objective of this report is to provide some useful information as a starting point to design specific interventions related to financial inclusion policy and how it can contribute to improve welfare (measured by GDP per Capita). Specifically, our research questions are:
 
@@ -28,9 +28,9 @@ To answer these questions, we do these following steps:
 
 **First**, we did an exploratory data analysis to select the highest mean for each group of indicators. For example, for account ownership set of indicators, we select account ownership of adults with secondary education or more to represent this group. And for no account set of indicators, we select no account because of insufficient funds to represent this group.
 
-![Bank Branches](/images/map_bankbranches.png)
+![Bank Branches](./images/map_bankbranches.png)
 
-![GDP](/images/map_gdp.png)
+![GDP](./images/map_gdp.png)
 
 **Second**, we try to build a parsimonious regression model based on the selected indicators for each component of financial inclusion measures to predict GDP per Capita, thus specify the model as follow: \\(log(GDPpercap)=\\beta\_0+\\beta\_1(account)+\\beta\_2(financialaccount)+\\beta\_3(noaccount)+\\beta\_4(internetpayment)+\\beta\_5log(ATM)+\\beta\_6log(bankbranch)\\)
 
@@ -50,17 +50,17 @@ To answer these questions, we do these following steps:
 Estimation & Prediction Results
 ===============================
 
-**Model Selection**. We got the smallest Negative MSE from Polynomial Regression which is about -0.65. This result is consistent with the visual inspection from our pair plot which showed only one feature that has some degree of non-linearity with the label (internet usage). On the other hand, we got the best R-squared value from simple OLS model, which is about 0.71. This high R-squared compared to the other two models might be overfit with our train data. Based on these results, we can safely say that the best model in predicting GDP per Capita is using the simple Linear Regression. ![Cross Validation](/images/cv.jpg) ![Prediction Performance](/images/performance.jpg)
+**Model Selection**. We got the smallest Negative MSE from Polynomial Regression which is about -0.65. This result is consistent with the visual inspection from our pair plot which showed only one feature that has some degree of non-linearity with the label (internet usage). On the other hand, we got the best R-squared value from simple OLS model, which is about 0.71. This high R-squared compared to the other two models might be overfit with our train data. Based on these results, we can safely say that the best model in predicting GDP per Capita is using the simple Linear Regression. ![Cross Validation](/images/cv.jpg) ![Prediction Performance](./images/performance.jpg)
 
 **Estimation**. The estimation result showed that the most effective financial inclusion policy to improve GDP per Capita is the one which related to the Geographical Outreach. In our parsimonious regression, we used the number of ATM machine as the selected variable for Geographical Outreach category. We can interpret the coefficient (0.06) as: All else constant, for each additional 1% increase in ATM per 1000km, we expect about 0.06% increase in GDP per capita. This tells us that one of the most basic needs of a country to progress toward better financial inclusion and achieving welfare improvement is by spreading more access point to the basic financial services (e.g. ATM and bank branch).
 
 **Prediction**. Using OLS, the result of our parsimonious regression is the best one compared to Polynomial Regression and SGD Regression. The small sample size may explain why the test set also performed better under OLS. With only 25 countries as the test set, it will be hard for the non-linear model to capture the whole pattern of the data, thus the linear one performs better.
 
-![Regression Coeff](/images/regression.jpg)
+![Regression Coeff](./images/regression.jpg)
 
 **PCA**. Based on the scatter plot between PCA1 VS PCA2, we got a very interesting pattern and behavior of latent variables. We can see most of high-income countries have a high value of PCA1 and low value of PCA2. On the other hand, the rest of the income group scored a reversed pattern both for PCA1 and PCA2. We can interpret these as a barrier for a better financial inclusion. The barrier is so high thus only high-income countries can tackle this issue. One possible explanation for these are related to the financial barrier (e.g. high bank account administration cost, high transaction fee) and non-financial barrier (e.g. distance to the nearest bank, heavy documentation to open a bank account).
 
-![PCA](/images/PCA.png)
+![PCA](./images/PCA.png)
 
 FURTHER WORK & IMPROVEMENT
 ==========================
