@@ -1,7 +1,7 @@
 title: Boni's Page
 logo: 
 description: Complex is better than complicated
-show_downloads: false
+show_downloads: true
 google_analytics:
 remote_theme: bonioloff/minimal
 main_page: https://bonioloff.github.io
