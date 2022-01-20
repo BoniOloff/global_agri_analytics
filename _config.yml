@@ -3,7 +3,7 @@ logo:
 description: Complex is better than complicated
 show_downloads: false
 google_analytics:
-remote_theme: bonioloff/minimal@v0.2.0
+remote_theme: bonioloff/minimal
 main_page: https://bonioloff.github.io
 linkedin: https://www.linkedin.com/in/bonioloff
 leetcode: https://leetcode.com/bonioloff
