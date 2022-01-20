@@ -16,7 +16,6 @@ In this project, we explored the 2017 **World Bank Global Financial Inclusion (F
 **Data merging**: After we got both of the datasets (Findex & FAS), we merged those with the help of _country\_id_ information (3-digit code) to make sure the merging process is correct without accidently removing countries which have a different name on each dataset (e.g. United States VS United States of America). The result is a main dataframe (_df\_imfwb_) with 126 rows (representing 126 countries) and 54 columns (representing 49 indicators from Findex and 5 indicators from FAS). Lastly, we add one additional column as our dependent variable in this analysis, that is GDP per capita. We did a similar API calling procedure to get the data from World Bank World Development Indicator (WDI). For the specific purpose of spatial visualization, we also imported countries shapefile data from Geopandas and add them as geometry column into our final _df\_imfwb_.
 
 ## RESEARCH QUESTIONS & METHODOLOGY
-================================
 
 ![Methodology](./images/methodology.jpeg)
 
@@ -49,7 +48,6 @@ To answer these questions, we do these following steps:
 **Fifth**, we estimate the latent variables for all variables using Principal Component Analysis (PCA) to find the common factors of financial inclusion progress across countries. This step aims to answer the multidimensionality of financial inclusion challenge in which unobserved within the definition of Findex and FAS indicators. The common factors should able to explain most of variances across country income-group and touch our sense as policy maker to look deeper on new dimension outside these survey indicators.
 
 ## Estimation & Prediction Results
-===============================
 
 **Model Selection**. We got the smallest Negative MSE from Polynomial Regression which is about -0.65. This result is consistent with the visual inspection from our pair plot which showed only one feature that has some degree of non-linearity with the label (internet usage). On the other hand, we got the best R-squared value from simple OLS model, which is about 0.71. This high R-squared compared to the other two models might be overfit with our train data. Based on these results, we can safely say that the best model in predicting GDP per Capita is using the simple Linear Regression. ![Cross Validation](/images/cv.jpeg) ![Prediction Performance](./images/performance.jpeg)
 
@@ -64,7 +62,6 @@ To answer these questions, we do these following steps:
 ![PCA](./images/PCA.png)
 
 ## FURTHER WORK & IMPROVEMENT
-==========================
 
 Some of the potential further works to improve the results are:
 
