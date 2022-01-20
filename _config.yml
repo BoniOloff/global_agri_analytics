@@ -1,6 +1,8 @@
 title: Boni's Page
-logo: /assets/img/logo.png
-description: 
+logo: 
+description: ""
 show_downloads: false
 google_analytics:
 remote_theme: pages-themes/minimal@v0.2.0
+github:
+ - project
