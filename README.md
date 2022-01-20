@@ -32,7 +32,7 @@ To answer these questions, we do these following steps:
 
 ![GDP](./images/map_gdp.png)
 
-**Second**, we try to build a parsimonious regression model based on the selected indicators for each component of financial inclusion measures to predict GDP per Capita, thus specify the model as follow: \\(log(GDPpercap)=\\beta\_0+\\beta\_1(account)+\\beta\_2(financialaccount)+\\beta\_3(noaccount)+\\beta\_4(internetpayment)+\\beta\_5log(ATM)+\\beta\_6log(bankbranch)\\)
+**Second**, we try to build a parsimonious regression model based on the selected indicators for each component of financial inclusion measures to predict GDP per Capita, thus specify the model with following variables:
 
 *   **Account**: has an account at formal or non-formal financial institution. This variable captures the unbanked population as the first step to a financial access.
 *   **Financial Account**: has an account at formal financial institution (e.g. bank). This variable captures the next step toward better financial inclusion.
