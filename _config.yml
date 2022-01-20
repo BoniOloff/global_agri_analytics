@@ -5,4 +5,4 @@ show_downloads: false
 google_analytics:
 remote_theme: pages-themes/minimal@v0.2.0
 github:
- - project
+ - repository_name: https://github.com/bonioloff/
