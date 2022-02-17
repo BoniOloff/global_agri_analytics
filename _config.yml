@@ -6,8 +6,7 @@ google_analytics: G-J0YH541K46
 remote_theme: bonioloff/minimal
 main_page: https://bonioloff.github.io
 linkedin: https://www.linkedin.com/in/bonioloff
-leetcode: https://leetcode.com/bonioloff
-kaggle: https://www.kaggle.com/bonioloff
+hackerrank: https://www.hackerrank.com/bonioloff
 github:
   is_user_page: true
   is_project_page: false
